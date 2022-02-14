@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-
+#max - 16 system
 def convert_base(num, to_base=10, from_base=10):
     # first convert to decimal number
     if isinstance(num, str):
@@ -9,7 +9,7 @@ def convert_base(num, to_base=10, from_base=10):
     else:
         n = int(num)
     # now convert decimal to 'to_base' base
-    alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet = "0123456789ABCDEF"
     if n < to_base:
         return alphabet[n]
     else:

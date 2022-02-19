@@ -41,7 +41,7 @@ def clear():
 
 def add_operation(operation):
     value = calc.get()
-    if value[0] == '0' and len(value)==1:
+    if value[0] == '0' and len(value) == 1:
         value = value[1:]
     if value[-1] in '-+/*':
         value = value[:-1]
@@ -70,12 +70,20 @@ win['bg'] = '#33ffe6'
 win.title('Калькулятор')
 
 
-labelTop = tk.Label(win, text='В какой системе счисления хотите выполнять действия:')
-labelTop.grid(row=0, column=1, sticky='wens', padx=5, pady=7)
+labelTop = tk.Label(win, text='В какой системе счисления хотите видеть первое число:')
+labelTop.grid(row=0, column=0, sticky='wens', padx=5, pady=7)
 
 
 combo = ttk.Combobox(win, values=(2, 8, 16))
-combo.grid(row=1, column=1, sticky='wens', padx=5, pady=7)
+combo.grid(row=1, column=0, sticky='wens', padx=5, pady=7)
+
+
+labelTop1 = tk.Label(win, text='В какой системе счисления хотите видеть второе число:')
+labelTop1.grid(row=0, column=1, sticky='wens', padx=5, pady=7)
+
+
+combo1 = ttk.Combobox(win, values=(2, 8, 16))
+combo1.grid(row=1, column=1, sticky='wens', padx=5, pady=7)
 
 
 calc = tk.Entry(win, justify=tk.RIGHT, font=('Arial', 15), width=15)
